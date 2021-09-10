@@ -1,0 +1,98 @@
+{
+  "head": {
+    "title": "Action Quality | Good quality, satisfied business.",
+    "description": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+  },
+
+  "header": {
+    "id": "header",
+    "logo": {
+      "src": "/images/logo-action-quality.png",
+      "alt": "Action Quality Logo",
+      "width": 325,
+      "height": 131
+    }
+  },
+
+  "home": {
+    "id": "home",
+    "title": "Action Quality", 
+    "content": "Adote o Quality Assurance como parte da sua estratégia de negócios e garanta resultados cada vez melhores para sua organização! #qualityassurance #estratégia #negócios #digitaltransformation"
+  },
+
+  "sections": [
+    {
+      "id": "about",
+      "title": "Sobre",
+      "position": "left",
+      "color": "#222",
+      "background": "#476D9D",
+      "image": "/images/creativity.jpg",
+      "content": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+    },
+    {
+      "id": "strategy",
+      "title": "Estrategia",
+      "position": "right",
+      "color": "#4E4E5A",
+      "background": "#E1DBD9",
+      "image": "/images/strategy.jpg",
+      "content": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+    },
+    {
+      "id": "clients",
+      "title": "Clientes",
+      "position": "left",
+      "color": "#FFF",
+      "background": "#bc5451",
+      "image": "/images/client.jpg",
+      "content": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+    }
+  ],
+
+  "contact": {
+    "id": "contact",
+    "title": "Fale Conosco",
+    "name": {
+      "label": "Nome",
+      "placeholder": "Digite seu nome"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Digite seu e-mail"
+    },
+    "phone": {
+      "label": "Telefone",
+      "placeholder": "Digite seu número de telefone"
+    },
+    "subject": {
+      "label": "Assunto",
+      "placeholder": "Digite o assunto"
+    },
+    "message": {
+      "label": "Mensagem",
+      "placeholder": "Digite a mensagem"
+    }
+  },
+
+  "footer": {
+    "linkedin": { 
+      "link" :"https://www.linkedin.com/company/action-quality",
+      "text": "Linkedin",
+      "logo": {
+        "src": "/images/logo-linkedin.png",
+        "alt": "Action Quality Linkedin",
+        "width": 20,
+        "height": 20
+      }
+    },
+    "contact": {
+      "number": "19997306871",
+      "text": "Contato: 19 99730.6871"
+    },
+    "designBy": {
+      "link": "https://ronipaschoal.com.br",
+      "text": "Design By Roni Paschoal"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+section.contact {
+  height: 100vh;
+
+  background: url(../../public/images/contact-us.jpg);
+  background-size: 200%;
+  background-position: right;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--menu-height) var(--container-padding) 0;
+
+  form {
+
+    color: #777;
+
+    width: 100%;
+    
+    label {
+      margin: 10px 10px 5px;
+      display: block;
+      font-weight: 300;
+    }
+    input, textarea {
+      color: #777;
+      
+      padding: 10px;
+      width: 100%;
+      background: rgba(#fff, .4);
+      border: solid 1px #aaa;
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+
+}

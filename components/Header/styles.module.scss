@@ -1,0 +1,89 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 800px;
+
+header.header {
+  nav {
+    display: flex;
+    z-index: 10;
+    li { 
+      a {
+        &.active, &:hover:not(.active) {
+          border-bottom: var(--color-primary) 1px solid;
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+  
+  @media (min-width: $breakpoint-desktop) {
+
+    nav {
+      height: var(--menu-height);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: rgba(255,255,255,.95);
+      border-bottom: var(--color-primary) 3px solid;
+
+      padding: 0 var(--container-padding) 0;
+
+      * {
+        height: 100%;
+      }
+  
+      ul {
+        justify-content: flex-end;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 5%;
+  
+        li {
+          a {
+            display: block;
+            text-align: center;
+            padding: 18px 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 300;
+          }
+        }
+      } 
+    }
+  }
+
+  
+  @media (min-width: $breakpoint-tablet) {
+
+    // ul {
+    //   margin: 0;
+    //   padding: 0;
+    //   width: 25%;
+    //   background-color: #f1f1f1;
+    //   height: 100%; /* Full height */
+    //   position: fixed; /* Make it stick, even on scroll */
+    //   overflow: auto; /* Enable scrolling if the sidenav has too much content */
+
+    //   li {
+    //     a {
+    //       display: block;
+    //       color: #555;
+    //       padding: 8px 16px;
+    //       text-decoration: none;
+  
+    //       &:hover:not(.active) {
+    //         background-color: #555;
+    //         color: white;
+    //       }
+    //     }
+    //   }
+    // }
+
+  }
+
+}
+
