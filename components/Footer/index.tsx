@@ -31,7 +31,7 @@ const Footer: NextPage<Props> = ({ data }) => {
 
   return (
     <footer className={styles.footer}>
-      <a href={ data.linkedin.link } target="_blank">
+      <a href={ data.linkedin.link } target="_blank" rel="noreferrer">
         {/* { data.linkedin.text } &nbsp; */}
         <Image 
           src={data.linkedin.logo.src}
@@ -39,8 +39,8 @@ const Footer: NextPage<Props> = ({ data }) => {
           width={data.linkedin.logo.width}
           height={data.linkedin.logo.height} />
       </a>
-      <a href={ 'tel:' + data.contact.number } target="_blank">{ data.contact.text }</a>
-      <a href={ data.designBy.link } target="_blank">{ data.designBy.text }</a>
+      <a href={ 'tel:' + data.contact.number } target="_blank" rel="noreferrer">{ data.contact.text }</a>
+      <a href={ data.designBy.link } target="_blank" rel="noreferrer">{ data.designBy.text }</a>
     </footer>
   );
 }
