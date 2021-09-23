@@ -60,26 +60,37 @@
   "contact": {
     "id": "contact",
     "title": "Fale Conosco",
-    "name": {
-      "label": "Nome",
-      "placeholder": "Digite seu nome"
-    },
-    "email": {
-      "label": "E-mail",
-      "placeholder": "Digite seu e-mail"
-    },
-    "phone": {
-      "label": "Telefone",
-      "placeholder": "Digite seu número de telefone"
-    },
-    "subject": {
-      "label": "Assunto",
-      "placeholder": "Digite o assunto"
-    },
-    "message": {
-      "label": "Mensagem",
-      "placeholder": "Digite a mensagem"
-    }
+    "fields" : [
+      {
+        "name": "name",
+        "label": "Nome",
+        "placeholder": "Digite seu nome",
+        "type": "input"
+      },
+      { "name": "email",
+        "label": "E-mail",
+        "placeholder": "Digite seu e-mail",
+        "type": "input"
+      },
+      {
+        "name": "phone",
+        "label": "Telefone",
+        "placeholder": "Digite seu número de telefone",
+        "type": "input"
+      },
+      {
+        "name": "subject",
+        "label": "Assunto",
+        "placeholder": "Digite o assunto",
+        "type": "input"
+      },
+      {
+        "name": "message",
+        "label": "Mensagem",
+        "placeholder": "Digite a mensagem",
+        "type": "textarea"
+      }
+    ]
   },
 
   "footer": {

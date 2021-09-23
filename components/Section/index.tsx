@@ -20,7 +20,7 @@ const Section: NextPage<Props> = ({ data }) => {
   return (
     <section id={data.id} className={styles.section}>
       
-      <div className="image"></div>
+      <div className={`${styles.image} image`}></div>
       <div>
         <h2>{data.title}</h2>
         <p>{data.content}</p>

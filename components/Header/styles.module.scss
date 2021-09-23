@@ -6,22 +6,25 @@ header.header {
   nav.navbar {
     
     img {
-      width: 189px;
-      height: 70px;
+      /* Original 325 x 131 */
+      width: 146.25px;
+      height: 58.95px;
     }
 
-    height: var(--menu-height);
     width: 100%;
+    height: var(--menu-height);
+    padding: 0 var(--container-padding) 0;
+
     position: fixed;
     top: 0;
+    z-index: 10;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
-    z-index: 10;
+    
     background-color: #fff;
     border-bottom: var(--color-primary) 3px solid;
-    padding: 0 var(--container-padding) 0;
 
     .bar {
       display: block;
@@ -44,29 +47,27 @@ header.header {
     }
 
     .navLink{
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: 400;
         color: #475569;
     }
 
     .navLink {
       &.active, &:hover:not(.active) {
-        border-bottom: var(--color-primary) 2px solid;
+        border-bottom: var(--color-primary) .2rem solid;
         color: var(--color-primary);
       }
     }
 
-    .navLogo {
-        color: var(--color-primary);
-    }
+
         
-        li {
-          a {
-            padding: 2.3rem 0;
-            text-transform: uppercase;
-            font-weight: 300;
-          }
-        }
+    li {
+      a {
+        padding: 1.3rem 0;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+    }
        
   }
 
