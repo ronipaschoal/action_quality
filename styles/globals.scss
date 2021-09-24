@@ -6,23 +6,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-@font-face {
-  font-family: 'VikingFont';
-  src: local('VikingFont'), url('/public/font/viking.TTF') format('truetype');
-}
-
-/* 
-font-family: 'Gowun Batang', serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
-
 html {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
-
+  
   body {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -30,14 +18,11 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-//   font-family: 'VikingFont';
-//   box-sizing: border-box;
 }
 
 li {
   list-style: none;
   display: inline;
-  // font-family: 'Raleway', sans-serif;
 }
 
 a {

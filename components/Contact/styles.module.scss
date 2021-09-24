@@ -1,23 +1,33 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 800px;
+
 section.contact {
   height: 100vh;
 
-  min-height: 590px;
+  min-height: 660px;
 
   background: url(../../public/images/contact-us.jpg);
   background-size: 200%;
   background-position: right;
 
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 
-  padding: var(--menu-height) var(--container-padding) 0;
-
+  h2 {
+    font-size: 4rem;
+    font-family: 'Bastarda';
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+  
   form {
 
-    color: #777;
-
+    height: 100%;
     width: 100%;
+    padding: var(--menu-height) var(--container-padding) 0;
+
+    color: #777;
     
     label {
       margin: 10px 10px 5px;
@@ -35,6 +45,14 @@ section.contact {
     textarea {
       height: 100px;
     }
+  }
+
+  @media (max-width: $breakpoint-tablet) { 
+
+    form {
+      background-color: rgba(#fff, .8);
+    }
+    background-size: auto;
   }
 
 }

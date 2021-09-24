@@ -60,6 +60,24 @@ $breakpoint-desktop: 800px;
 
     h1 {
       width: 500px;
+
+      font-size: 5rem;
+      text-align: center;
+      
+      font-family: 'Viking-Normal';
+
+      text-shadow: 2px 1px 2px rgba($color: #000, $alpha: .2);
+
+      span:first-child {
+        font-size: 5.5rem;
+        font-family: 'Futhark';
+        color: var(--color-primary);
+      }
+
+      span:last-child {
+        font-family: 'Bastarda';
+      }
+      
       @media (max-width: $breakpoint-tablet) { 
         width: 100%;
         text-align: center;
@@ -69,6 +87,5 @@ $breakpoint-desktop: 800px;
   }
   p {
     width: 100%;
-    text-align: justify;
   }
 }

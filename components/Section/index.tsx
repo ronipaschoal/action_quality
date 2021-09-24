@@ -18,31 +18,22 @@ interface Props {
 const Section: NextPage<Props> = ({ data }) => {
 
   return (
-    <section id={data.id} className={styles.section}>
+    <section id={data.id}
+      className={styles.section}
+      style={{ 
+        background: `${data.background}99`,
+        color: data.color,
+        flexDirection: data.position == 'left' ? 'row-reverse' : 'row'
+      }}>
       
-      <div className={`${styles.image} image`}></div>
-      <div>
+      <div className={`${styles.image} image`}
+        style={{ backgroundImage: `url(${data.image})`}}></div>
+
+      <div style={{ background: `${data.background}99`}}>
         <h2>{data.title}</h2>
         <p>{data.content}</p>
       </div>
-
-      <style jsx>{`
-        section {
-          background: ${data.background};
-          color: ${data.color};
-          flex-direction: ${ data.position == 'left' ? 'row-reverse' : 'row' };
-        }
-        .image {
-          background: url(${data.image});
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
-        // div:not(.image) {
-        //   padding: ${ data.position == 'left' ? '0  40px 0 var(--container-padding)' : '0 var(--container-padding) 0 40px' };
-        // }
-      `}</style>
-
+      
     </section>
   );
 }
