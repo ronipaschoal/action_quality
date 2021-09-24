@@ -32,6 +32,7 @@ const Contact: NextPage<Props> = ({ data }) => {
               </div>
             );
           })}
+          <br/>
           <input type="submit" />
       </form>
     </section>

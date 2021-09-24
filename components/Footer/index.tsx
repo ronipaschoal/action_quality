@@ -31,16 +31,20 @@ const Footer: NextPage<Props> = ({ data }) => {
 
   return (
     <footer className={styles.footer}>
-      <a href={ data.linkedin.link } target="_blank" rel="noreferrer">
-        {/* { data.linkedin.text } &nbsp; */}
-        <Image 
-          src={data.linkedin.logo.src}
-          alt={data.linkedin.logo.alt}
-          width={data.linkedin.logo.width}
-          height={data.linkedin.logo.height} />
-      </a>
-      <a href={ 'tel:' + data.contact.number } target="_blank" rel="noreferrer">{ data.contact.text }</a>
-      <a href={ data.designBy.link } target="_blank" rel="noreferrer">{ data.designBy.text }</a>
+      <div>
+        <a href={ data.linkedin.link } target="_blank" rel="noreferrer">
+          {/* { data.linkedin.text } &nbsp; */}
+          <Image 
+            src={data.linkedin.logo.src}
+            alt={data.linkedin.logo.alt}
+            width={data.linkedin.logo.width}
+            height={data.linkedin.logo.height} />
+        </a>
+        <a href={ 'tel:' + data.contact.number } target="_blank" rel="noreferrer">{ data.contact.text }</a>
+      </div>
+      <div>
+        <a href={ data.designBy.link } target="_blank" rel="noreferrer">{ data.designBy.text }</a>
+      </div>
     </footer>
   );
 }

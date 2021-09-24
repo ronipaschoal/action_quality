@@ -1,13 +1,25 @@
 .footer {
   border-top: #999 1px solid;
   color: #666;
-  height: 40px;
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 var(--container-padding) 0;
+  height: 50px;
 
   font-size: 1.4rem;
+  padding: 5px 0;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+  }
+  
+  div:last-child {
+    margin-top: .8rem;
+    color:#999;
+    background-color: #eeeeee99;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: .2rem;
+  }
 }

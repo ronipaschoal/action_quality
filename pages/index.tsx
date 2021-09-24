@@ -16,9 +16,11 @@ const App: NextPage = () => {
         <title>{ data.head.title }</title>
         <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet"></link>
         
-        <link href="./font/viking.ttf" rel="preload" as="font" crossOrigin=""></link>
+        <link href="./font/viking.otf" rel="preload" as="font" crossOrigin=""></link>
         <link href="./font/futhark.otf" rel="preload" as="font" crossOrigin=""></link>
         <link href="./font/bastarda.ttf" rel="preload" as="font" crossOrigin=""></link>
+        <link href="./font/aniron.ttf" rel="preload" as="font" crossOrigin=""></link>
+        <link href="./font/cafe.ttf" rel="preload" as="font" crossOrigin=""></link>
         
         <meta name="description" content={ data.head.description } />
         <link rel="icon" href="./images/favicon.png" type="image/png" />

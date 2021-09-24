@@ -17,6 +17,10 @@ $breakpoint-desktop: 800px;
   
   padding-top: var(--menu-height);
   
+  font-family: "Cafe";
+  font-size: 2rem;
+  font-weight: bold;
+
   div {
     width: 100%;
     display: flex;
@@ -64,18 +68,18 @@ $breakpoint-desktop: 800px;
       font-size: 5rem;
       text-align: center;
       
-      font-family: 'Viking-Normal';
+      font-family: "Viking-Normal";
 
       text-shadow: 2px 1px 2px rgba($color: #000, $alpha: .2);
 
       span:first-child {
         font-size: 5.5rem;
-        font-family: 'Futhark';
+        font-family: "Futhark";
         color: var(--color-primary);
       }
 
       span:last-child {
-        font-family: 'Bastarda';
+        font-family: "Bastarda";
       }
       
       @media (max-width: $breakpoint-tablet) { 

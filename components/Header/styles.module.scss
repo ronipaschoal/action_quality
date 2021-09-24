@@ -1,6 +1,31 @@
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 800px;
 
+@font-face {
+  font-family: "Viking-Normal";
+  src: url(../../public/font/viking.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Futhark";
+  src: url(../../public/font/futhark.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Bastarda";
+  src: url(../../public/font/bastarda.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Aniron";
+  src: url(../../public/font/aniron.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cafe";
+  src: url(../../public/font/cafe.ttf) format("truetype");
+}
+
 header.header {
  
   nav.navbar {
@@ -10,7 +35,7 @@ header.header {
       width: 146.25px;
       height: 58.95px;
     }
-
+    
     width: 100%;
     height: var(--menu-height);
     padding: 0 var(--container-padding) 0;
@@ -43,13 +68,13 @@ header.header {
     }
 
     .navItem {
-        margin-left: 5rem;
+      margin-left: 5rem;
     }
 
     .navLink{
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: #475569;
+      font-family: 'Aniron';
+      font-size: 1.2rem;
+      color: #475569;
     }
 
     .navLink {
@@ -64,7 +89,7 @@ header.header {
     li {
       a {
         padding: 1.3rem 0;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: 300;
       }
     }

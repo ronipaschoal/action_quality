@@ -10,8 +10,8 @@ $breakpoint-desktop: 800px;
   justify-content: center;
 
   h2 {
-    font-size: 4rem;
-    font-family: 'Bastarda';
+    font-size: 3rem;
+    font-family: 'Aniron';
     padding-bottom: 3rem;
   }
 
@@ -19,6 +19,9 @@ $breakpoint-desktop: 800px;
     height: 100vh;
     width: 50%;
     
+    font-family: "Cafe";
+    font-size: 2rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
