@@ -1,8 +1,9 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import styles from './styles.module.scss';
+import LanguageContext from '../../contexts/LanguageContext';
 
 interface Logo {
   src: string,
@@ -21,11 +22,14 @@ interface Props {
     id: string,
     logo: Logo,
     menu: Array<Menu>
+    language: Array<string>
   }
 }
 
 const Header: NextPage<Props> = ({ data }) => {
 
+  const language = useContext(LanguageContext);
+  
   const [activeMenu, setActiveMenu] = useState(data.menu[0].section);
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [navMenuActive, setNavMenuActive] = useState(false);
@@ -37,11 +41,13 @@ const Header: NextPage<Props> = ({ data }) => {
     setNavMenuActive(false);
   }
   
+  
   function listenToScroll() {
     // const winScroll = document.body.scrollTop || document.documentElement.scrollTop
     // const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     // const scrolled = winScroll / height;
     // console.log(scrolled);
+
 
     data.menu.forEach(function(menu : Menu){
       
@@ -65,9 +71,9 @@ const Header: NextPage<Props> = ({ data }) => {
       <nav className={styles.navbar}>
 
         <div className={styles.logo}>
-          <a href={`#${data.menu[0].section}`} 
+          <a href={`#${data.menu[language.languageActive].section}`} 
             className={styles.navLogo} 
-            onClick={ () => selectMenu(data.menu[0].section) }>
+            onClick={ () => selectMenu(data.menu[language.languageActive].section) }>
 
             <Image src={data.logo.src}
               alt={data.logo.alt}
@@ -85,11 +91,18 @@ const Header: NextPage<Props> = ({ data }) => {
                 <a href={`#${menu.section}`} onClick={ () => selectMenu(menu.section) } 
                   className={activeMenu == menu.section ?
                   `${styles.active} ${styles.navLink}` : styles.navLink}>
-                  { menu.title[0] }
+                  { menu.title[language.languageActive] }
                 </a>
               </li>
             );
           })}
+          <li>
+            <a className={styles.navItem} onClick={ () => {
+              language.setLanguageActive(language.languageActive ? 0 : 1);
+            }} >
+              <img src={ `../../images/${data.language[language.languageActive]}.png` } alt={data.language[language.languageActive]} />
+            </a>
+          </li>
         </ul>
 
         <div className={hamburgerActive 

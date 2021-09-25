@@ -1,9 +1,14 @@
-html,
-body {
-  padding: 0;
+:root {  
+  --color-primary: #e7c36b;
+  
+  --menu-height: 5.6rem;
+  --container-padding: 5%;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -14,12 +19,6 @@ html {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 li {
   list-style: none;
   display: inline;
@@ -28,14 +27,4 @@ li {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-:root {
-  --breakpoint-tablet: 768px;
-  --breakpoint-desktop: 900px;
-  
-  --color-primary: #e7c36b;
-  
-  --menu-height: 5.6rem;
-  --container-padding: 5%;
 }

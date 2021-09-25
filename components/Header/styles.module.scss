@@ -91,6 +91,13 @@ header.header {
         padding: 1.3rem 0;
         text-transform: capitalize;
         font-weight: 300;
+        
+        cursor: pointer;
+
+        img {
+          height: 25px;
+          width: 30px;
+        }
       }
     }
        
@@ -140,13 +147,11 @@ header.header {
     }
   }
 
-  
   @media (min-width: $breakpoint-tablet) {
 
     .hamburger {
       display: none;
     }
-
   }
 
 }

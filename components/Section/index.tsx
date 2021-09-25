@@ -1,21 +1,24 @@
 import { NextPage } from 'next';
-import Image from 'next/image';
+import { useContext } from 'react';
 
 import styles from './styles.module.scss';
+import LanguageContext from '../../contexts/LanguageContext';
 
 interface Props {
   data: {
     id: string,
-    title: string,
+    title: Array<string>,
     position: string,
     color: string,
     background: string,
-    content: string,
+    content: Array<string>,
     image: string
   }
 }
 
 const Section: NextPage<Props> = ({ data }) => {
+
+  const language = useContext(LanguageContext);
 
   return (
     <section id={data.id}
@@ -30,8 +33,8 @@ const Section: NextPage<Props> = ({ data }) => {
         style={{ backgroundImage: `url(${data.image})`}}></div>
 
       <div style={{ background: `${data.background}99`}}>
-        <h2>{data.title}</h2>
-        <p>{data.content}</p>
+        <h2>{data.title[language.languageActive]}</h2>
+        <p>{data.content[language.languageActive]}</p>
       </div>
       
     </section>

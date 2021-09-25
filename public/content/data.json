@@ -1,7 +1,11 @@
 {
   "head": {
     "title": "Action Quality | Good quality, satisfied business.",
-    "description": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+    "description": 
+      [
+        "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos.",
+        "Ingles Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+      ]
   },
 
   "header": {
@@ -18,80 +22,97 @@
       {"section": "strategy", "title": ["Estrategia", "Strategy"]},
       {"section": "clients", "title": ["Clientes", "Clients"]},
       {"section": "contact", "title": ["Fale Conosco", "Contact"]}
-    ]
+    ],
+    "language": ["pt-br", "en"]
   },
 
   "home": {
     "id": "home",
     "title": "Action Quality", 
-    "content": "Adote o Quality Assurance como parte da sua estratégia de negócios e garanta resultados cada vez melhores para sua organização!",
-    "content2": "#qualityassurance #estratégia #negócios #digitaltransformation"
+    "content": [
+      "Adote o Quality Assurance como parte da sua estratégia de negócios e garanta resultados cada vez melhores para sua organização!",
+      "Adopt Quality Assurance as part of your business strategy and ensure even better results for your organization!"
+    ],
+    "content2": [
+      "Adote o Quality Assurance como parte da sua estratégia de negócios e garanta resultados cada vez melhores para sua organização!",
+      "Adopt Quality Assurance as part of your business strategy and ensure even better results for your organization!"
+    ]
   },
 
   "sections": [
     {
       "id": "about",
-      "title": "Sobre",
+      "title": ["Sobre", "About"],
       "position": "left",
       "color": "#222",
       "background": "#476D9D",
       "image": "/images/creativity.jpg",
-      "content": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+      "content": [
+        "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos.",
+        "Ingles Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+      ]
     },
     {
       "id": "strategy",
-      "title": "Estrategia",
+      "title": ["Estrategia", "Strategy"],
       "position": "right",
       "color": "#4E4E5A",
       "background": "#E1DBD9",
       "image": "/images/strategy.jpg",
-      "content": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+      "content": [
+        "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos.",
+        "Ingles Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+      ]
     },
     {
       "id": "clients",
-      "title": "Clientes",
+      "title": ["Clientes", "Clients"],
       "position": "left",
       "color": "#FFF",
       "background": "#bc5451",
       "image": "/images/client.jpg",
-      "content": "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+      "content": [
+        "Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos.",
+        "Ingles Fornecer consultoria para implementação de processos robustos de qualidade de software e um time de profissionais de excelência. Nossa meta é impulsionar os conceitos de qualidade in first, motivar profissionais já estabelecidos no mercado e capacitar novos recursos."
+      ]
     }
   ],
 
   "contact": {
     "id": "contact",
-    "title": "Fale Conosco",
+    "title": ["Fale Conosco", "Contact Us"],
     "fields" : [
       {
         "name": "name",
-        "label": "Nome",
-        "placeholder": "Digite seu nome",
+        "label": ["Nome", "Name"],
+        "placeholder": ["Digite seu nome", "Type your name"],
         "type": "input"
       },
       { "name": "email",
-        "label": "E-mail",
-        "placeholder": "Digite seu e-mail",
+        "label": ["E-mail", "E-mail"],
+        "placeholder": ["Digite seu e-mail", "Type your e-mail"],
         "type": "input"
       },
       {
         "name": "phone",
-        "label": "Telefone",
-        "placeholder": "Digite seu número de telefone",
+        "label": ["Telefone", "Phone"],
+        "placeholder": ["Digite seu telefone", "Type your phone"],
         "type": "input"
       },
       {
         "name": "subject",
-        "label": "Assunto",
-        "placeholder": "Digite o assunto",
+        "label": ["Assunto", "Subject"],
+        "placeholder": ["Digite o assunto", "Type the subject"],
         "type": "input"
       },
       {
         "name": "message",
-        "label": "Mensagem",
-        "placeholder": "Digite a mensagem",
+        "label": ["Mensagem", "Message"],
+        "placeholder": ["Digite a mensagem", "Type the message"],
         "type": "textarea"
       }
-    ]
+    ],
+    "submit": ["Enviar", "Subimit"]
   },
 
   "footer": {
@@ -106,8 +127,8 @@
       }
     },
     "contact": {
-      "number": "19997306871",
-      "text": "Contato: 19 99730.6871"
+      "number": "+5519997306871",
+      "text": ["Contato: +55 19 99730.6871", "Contact: +55 19 99730.6871"]
     },
     "designBy": {
       "link": "https://ronipaschoal.com.br",
