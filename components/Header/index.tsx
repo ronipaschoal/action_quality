@@ -100,7 +100,9 @@ const Header: NextPage<Props> = ({ data }) => {
             <a className={styles.navItem} onClick={ () => {
               language.setLanguageActive(language.languageActive ? 0 : 1);
             }} >
-              <img src={ `../../images/${data.language[language.languageActive]}.png` } alt={data.language[language.languageActive]} />
+              <img src={ `../../images/${data.language[language.languageActive]}.png` } 
+                alt={data.language[language.languageActive]} 
+                title={data.language[language.languageActive]} />
             </a>
           </li>
         </ul>

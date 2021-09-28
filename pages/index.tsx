@@ -21,6 +21,7 @@ const App: NextPage = () => {
         <title>{ data.head.title }</title>
         
         <link href="./font/viking.otf" rel="preload" as="font" crossOrigin=""></link>
+        <link href="./font/viking.ttf" rel="preload" as="font" crossOrigin=""></link>
         <link href="./font/futhark.otf" rel="preload" as="font" crossOrigin=""></link>
         <link href="./font/bastarda.ttf" rel="preload" as="font" crossOrigin=""></link>
         <link href="./font/aniron.ttf" rel="preload" as="font" crossOrigin=""></link>

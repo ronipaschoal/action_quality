@@ -2,8 +2,13 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 800px;
 
 @font-face {
-  font-family: "Viking-Normal";
+  font-family: "Viking-Normal-Mobile";
   src: url(../../public/font/viking.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Viking-Normal";
+  src: url(../../public/font/viking.ttf) format("truetype");
 }
 
 @font-face {
