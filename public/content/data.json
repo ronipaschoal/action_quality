@@ -100,12 +100,6 @@
         "type": "input"
       },
       {
-        "name": "subject",
-        "label": ["Assunto", "Subject"],
-        "placeholder": ["Digite o assunto", "Type the subject"],
-        "type": "input"
-      },
-      {
         "name": "message",
         "label": ["Mensagem", "Message"],
         "placeholder": ["Digite a mensagem", "Type the message"],
