@@ -3,7 +3,6 @@ import { FormEvent, useContext, useState } from 'react';
 
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
-import axios from 'axios';
 
 interface field {
     name: string,
@@ -51,7 +50,7 @@ const Contact: NextPage<Props> = ({ data }) => {
       param += '&'
     });
 
-    const API_PATH = `https://ronipaschoal.com.br/webservice/mail.php?${param.substring(0, param.length - 1)}`;    
+    const API_PATH = `https://fiversystem.com/action-quality/mail.php?${param.substring(0, param.length - 1)}`;    
     const requestOptions = {
         method: 'get',
     };

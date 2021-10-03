@@ -13,7 +13,6 @@ interface Props {
   }
 }
 
-
 const Home: NextPage<Props> = ({ data }) => {
   
   const language = useContext(LanguageContext);
