@@ -113,6 +113,20 @@
         "type": "textarea"
       }
     ],
+    "status": {
+      "success": [
+        "Email enviado com sucesso!",
+        "Email successfully sent!"
+      ],
+      "error": [
+        "Houve um erro ao enviar o email, por gentileza entre em contato atráves do número 19 99730.6871",
+        "There was an error sending the email, please contact us at +55 19 99730.6871"
+      ],
+      "progress": [
+        "Enviando o email...",
+        "Sending the email..."
+      ]
+    },
     "submit": ["Enviar", "Subimit"]
   },
 
