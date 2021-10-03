@@ -51,8 +51,7 @@ const Contact: NextPage<Props> = ({ data }) => {
       param += '&'
     });
 
-    // const service = 'https://fiversystem.com/action-quality/mail.php?';
-    const service = 'https://ronipaschoal.com.br/mail.php?';
+    const service = 'https://fiversystem.com/action-quality/mail.php?';
     const API_PATH = `${service}${param.substring(0, param.length - 1)}`;    
     const requestOptions = {
         method: 'get',
