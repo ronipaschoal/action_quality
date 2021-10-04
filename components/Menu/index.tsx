@@ -55,7 +55,7 @@ const Menu: NextPage<Props> = ({ data }) => {
       if(menuItem == null) { return; }
 
       const position = menuItem.getBoundingClientRect();
-      if(position.top < 0 && position.bottom > 0) {
+      if(position.top < 1 && position.bottom > 1) {
         setActiveMenu(menu.section);
       }
     });
