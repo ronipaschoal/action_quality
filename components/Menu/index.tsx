@@ -2,33 +2,20 @@ import { NextPage } from 'next';
 import Image from 'next/image';
 import { useContext, useEffect, useState } from 'react';
 
+import { data } from './data.js';
+
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
-
-interface Logo {
-  src: string,
-  alt: string,
-  width: number,
-  height: number
-}
 
 interface Menu {
   section: string,
   title: Array<string>
 }
 
-interface Props {
-  data: {
-    id: string,
-    logo: Logo,
-    menu: Array<Menu>
-    language: Array<string>
-  }
-}
+const Menu: NextPage = () => {
 
-const Menu: NextPage<Props> = ({ data }) => {
-
-  const language = useContext(LanguageContext);
+  const language = useContext(LanguageContext).languageActive;
+  const setLanguageActive = useContext(LanguageContext).setLanguageActive;
   
   const [activeMenu, setActiveMenu] = useState(data.menu[0].section);
   const [hamburgerActive, setHamburgerActive] = useState(false);
@@ -48,7 +35,6 @@ const Menu: NextPage<Props> = ({ data }) => {
     // const scrolled = winScroll / height;
     // console.log(scrolled);
 
-
     data.menu.forEach(function(menu : Menu){
       
       const menuItem = document.querySelector(`#${menu.section}`);
@@ -66,13 +52,13 @@ const Menu: NextPage<Props> = ({ data }) => {
   },[]);
 
   return (
-    <header id={data.id} className={styles.header} lang={ data.language[language.languageActive] }>
+    <header id={data.id} className={styles.header} lang={ data.language[language] }>
       <nav className={styles.navbar}>
 
         <div className={styles.logo}>
-          <a href={`#${data.menu[language.languageActive].section}`} 
+          <a href={`#${data.menu[language].section}`} 
             className={styles.navLogo} 
-            onClick={ () => selectMenu(data.menu[language.languageActive].section) }>
+            onClick={ () => selectMenu(data.menu[language].section) }>
 
             <Image src={data.logo.src}
               alt={data.logo.alt}
@@ -90,18 +76,18 @@ const Menu: NextPage<Props> = ({ data }) => {
                 <a href={`#${menu.section}`} onClick={ () => selectMenu(menu.section) } 
                   className={activeMenu == menu.section ?
                   `${styles.active} ${styles.navLink}` : styles.navLink}>
-                  { menu.title[language.languageActive] }
+                  { menu.title[language] }
                 </a>
               </li>
             );
           })}
           <li>
             <a className={styles.navItem} onClick={ () => {
-              language.setLanguageActive(language.languageActive ? 0 : 1);
+              setLanguageActive(language ? 0 : 1);
             }} >
-              <img src={ `../../images/${data.language[language.languageActive]}.png` } 
-                alt={data.language[language.languageActive]} 
-                title={data.language[language.languageActive]} />
+              <img src={ `../../images/${data.language[language]}.png` } 
+                alt={data.language[language]} 
+                title={data.language[language]} />
             </a>
           </li>
         </ul>

@@ -2,20 +2,14 @@ import { NextPage } from 'next';
 import { useContext } from 'react';
 import Head from 'next/head';
 
+import { data } from './data.js';
+
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
 
-interface Props {
-  data: {
-    title: string,
-    description: Array<string>,
-    fonts: Array<string>
-  }
-}
-
-const Header: NextPage<Props> = ({ data }) => {
+const Header: NextPage = () => {
   
-  const language = useContext(LanguageContext);
+  const language = useContext(LanguageContext).languageActive;
 
   return (
     <Head>
@@ -27,7 +21,7 @@ const Header: NextPage<Props> = ({ data }) => {
         );
       })}
       
-      <meta name="description" content={ data.description[language.languageActive] } />
+      <meta name="description" content={ data.description[language] } />
       <link rel="icon" href="./images/favicon.png" type="image/png" />
     </Head>
   );

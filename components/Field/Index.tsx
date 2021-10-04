@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
-import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
 import FormContext from '../../contexts/FormContext';
 
@@ -17,7 +16,7 @@ interface field {
 const Field: NextPage<field> = ({ data }) => {
   
   const formContext = useContext(FormContext);
-  const language = useContext(LanguageContext);
+  const language = useContext(LanguageContext).languageActive;
 
   function handleChange(evt: any) {
 
@@ -30,21 +29,21 @@ const Field: NextPage<field> = ({ data }) => {
 
   return (
     <>
-      <label htmlFor={data.name}>{ data.label[language.languageActive] }</label>
+      <label htmlFor={data.name}>{ data.label[language] }</label>
       { data.type == "input" &&
         <input type="text"
           name={data.name}
           id={data.name}
           value={formContext.fieldState[data.name]}
           onChange={handleChange}
-          placeholder={ data.placeholder[language.languageActive] } />
+          placeholder={ data.placeholder[language] } />
       }
       { data.type == "textarea" &&
         <textarea name={data.name}
           id={data.name}
           value={formContext.fieldState[data.name]}
           onChange={handleChange}
-          placeholder={ data.placeholder[language.languageActive] } />
+          placeholder={ data.placeholder[language] } />
       }
   </>
   );

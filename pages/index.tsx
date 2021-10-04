@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 
-import data from '../public/content/data.json';
 import LanguageContext from '../contexts/LanguageContext';
 
 const App: NextPage = () => {
@@ -14,9 +13,9 @@ const App: NextPage = () => {
 
   return (
     <LanguageContext.Provider value={{languageActive, setLanguageActive }} >
-      <Header data={data.head} />
+      <Header />
       <Main />
-      <Footer data={data.footer} />
+      <Footer />
     </LanguageContext.Provider>
   )
 }

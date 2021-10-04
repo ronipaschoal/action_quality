@@ -1,6 +1,8 @@
 import { NextPage } from 'next';
 import { FormEvent, useContext, useState } from 'react';
 
+import { data } from './data.js';
+
 import Field from '../Field/Index';
 
 import styles from './styles.module.scss';
@@ -14,21 +16,7 @@ interface field {
     type: string
 }
 
-interface Props {
-  data: {
-    id: string,
-    title: Array<string>,
-    fields: Array<field>,
-    submit: Array<string>,
-    status: {
-      success: Array<string>,
-      error: Array<string>,
-      progress: Array<string>
-    }
-  }
-}
-
-const Contact: NextPage<Props> = ({ data }) => {
+const Contact: NextPage = () => {
 
   const language = useContext(LanguageContext);
 

@@ -2,33 +2,12 @@ import { NextPage } from 'next';
 import { useContext } from 'react';
 import Image from 'next/image';
 
+import { data } from './data.js';
+
 import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
 
-interface Props {
-  data: {
-    linkedin: { 
-      link: string,
-      text: string,
-      logo: {
-        src: string,
-        alt: string,
-        width: number,
-        height: number
-      }
-    },
-    contact: {
-      number: string,
-      text: Array<string>
-    },
-    designBy: {
-      link: string,
-      text: string
-    }
-  }
-}
-
-const Footer: NextPage<Props> = ({ data }) => {
+const Footer: NextPage = () => {
 
   const language = useContext(LanguageContext);
 

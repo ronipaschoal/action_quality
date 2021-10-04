@@ -5,21 +5,24 @@ import Home from '../Home';
 import Section from '../Section';
 import Contact from '../Contact';
 
-import data from '../../public/content/data.json';
 import styles from './styles.module.scss';
 
 const Main: NextPage = () => {
 
+  const sections = {
+    about: 0,
+    strategy: 1,
+    clients: 2
+  }
+
   return (
     <main>
-      <Menu data={data.menu} />
-      <Home data={data.home} />
-      { data.sections.map((section, index) => {
-        return(
-          <Section key={index} data={section} />
-        );
-      })}
-      <Contact data={data.contact} />
+      <Menu />
+      <Home />
+      <Section index={sections.about} />
+      <Section index={sections.strategy} />
+      <Section index={sections.clients} />
+      <Contact />
     </main>
   );
 }
