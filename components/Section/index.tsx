@@ -12,25 +12,25 @@ interface Props {
 
 const Section: NextPage<Props> = ({ index }) => {
 
-  const data = dataArray[index];
-  const language = useContext(LanguageContext).languageActive;
+  const {id, background, color, position, image, title, content} = dataArray[index];
+  const {languageActive} = useContext(LanguageContext);
 
   return (
-    <section id={data.id}
+    <section id={id}
       className={styles.section}
       style={{ 
-        background: `${data.background}99`,
-        color: data.color,
-        flexDirection: data.position == 'left' ? 'row-reverse' : 'row'
+        background: `${background}99`,
+        color: color,
+        flexDirection: position == 'left' ? 'row-reverse' : 'row'
       }}>
       
       <div className={`${styles.image} image`}
-        style={{ backgroundImage: `url(${data.image})`}}>
+        style={{ backgroundImage: `url(${image})`}}>
       </div>
 
-      <div style={{ background: `${data.background}99`}}>
-        <h2>{data.title[language]}</h2>
-        <p>{data.content[language]}</p>
+      <div style={{ background: `${background}99`}}>
+        <h2>{title[languageActive]}</h2>
+        <p>{content[languageActive]}</p>
       </div>
       
     </section>

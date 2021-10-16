@@ -18,79 +18,69 @@ interface field {
 
 const Contact: NextPage = () => {
 
-  const language = useContext(LanguageContext);
+  const { languageActive } = useContext(LanguageContext);
+  const { id, fields, title, status, submit, serviceUrl } = data;
 
-  const [fieldState, setFieldState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  const newMessage = Object.fromEntries(data.fields.map(field => ([field.name, ""])));
+
+  const [fieldState, setFieldState] = useState(newMessage);
   
-  const [status, setStatus] = useState('');
+  const [formStatus, setFormStatus] = useState('');
   
   const handleSubmit = async (e: FormEvent) => {
 
     e.preventDefault();
     
-    var param = '';
-    Object.entries(fieldState).map((value:Array<string>,index:number) => {
-      param += value[0] + '=' + value[1];
-      param += '&'
+    const param = Object.entries(fieldState).map( (value:Array<string>, index:number) => {
+
+      if(value[1] === '') { 
+        setFormStatus(status.required[languageActive]);
+        return 'formError';
+      }
+      return `${value[0]}=${escape(value[1])}&`;
+
     });
 
-    const service = 'https://fiversystem.com/action-quality/mail.php?';
-    const API_PATH = `${service}${param.substring(0, param.length - 1)}`;    
-    const requestOptions = {
-        method: 'get',
-    };
+    if (param.indexOf('formError') === -1) {
+      
+      const API_PATH = `${serviceUrl}${param.join('')}`;
+      const requestOptions = { method: 'get' };
 
-    var errorSending = false;
+      setFormStatus(status.progress[languageActive]);
 
-    setStatus(data.status.progress[language.languageActive]);
+      const response = await fetch(API_PATH, requestOptions)
+        .then(response => response.json())
+        .then(data => {
 
-    const response = await fetch(API_PATH, requestOptions).then(response =>{
-      return response.json();
-    }).then(data => {
-      console.log(data.success);
-    }).catch(function(error) {
-      errorSending = true;
-      setStatus(data.status.error[language.languageActive]);
-      console.log('There has been a problem with your fetch operation: ' + error.message);
-    });
+          if(data.success === undefined) {
+            throw Error('undefined'); 
+          } else if(data.success === false) {
+            setFormStatus(status.required[languageActive]);
+          } else {
+            setFormStatus(status.success[languageActive]);
+            setFieldState(newMessage);
+          }
+        })
+        .catch(error => setFormStatus(status.error[languageActive]));
+    }
 
-
-    console.log(API_PATH);
-    setTimeout(
-      function() {
-        if(!errorSending) {
-          setStatus(data.status.success[language.languageActive]);
-          setFieldState({
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
-        }
-      }.bind(this),
-      3000
-    );
+    setTimeout(function() { setFormStatus('') }, 3000);
   }
 
   return (
     <FormContext.Provider value={{ fieldState, setFieldState }} >
-      <section id={data.id} className={styles.contact}>
+      <section id={id} className={styles.contact}>
         <form onSubmit={ e => handleSubmit(e) }>
-          <h2>{data.title[language.languageActive]}</h2>
-          <p>{status}</p>
-            { data.fields.map((field, index) => {
+          <h2>{title[languageActive]}</h2>
+          <p>{formStatus}</p>
+            { fields.map((field, index) => {
               return(
                 <Field key={index} data={field} />
               );
             })}
-            <br/>
-            <br/>
-            <input type="submit" value={ data.submit[language.languageActive] } />
+            <div>
+              <input type="submit" value={ submit[languageActive] } />
+            </div>
         </form>
       </section>
     </FormContext.Provider>

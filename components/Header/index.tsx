@@ -4,7 +4,6 @@ import Head from 'next/head';
 
 import { data } from './data.js';
 
-import styles from './styles.module.scss';
 import LanguageContext from '../../contexts/LanguageContext';
 
 const Header: NextPage = () => {

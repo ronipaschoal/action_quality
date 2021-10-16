@@ -1,5 +1,4 @@
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 800px;
+@import '../../styles/variables';
 
 section.contact {
   height: 100vh;
@@ -28,7 +27,7 @@ section.contact {
 
     height: 100%;
     width: 100%;
-    padding: var(--menu-height) var(--container-padding) 0;
+    padding: $menu-height $container-padding 0;
 
     color: #777;
     

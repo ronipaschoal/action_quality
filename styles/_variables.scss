@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Viking-Normal-Mobile";
+  src: url(../public/font/viking.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Viking-Normal";
+  src: url(../public/font/viking.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Futhark";
+  src: url(../public/font/futhark.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Bastarda";
+  src: url(../public/font/bastarda.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Aniron";
+  src: url(../public/font/aniron.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cafe";
+  src: url(../public/font/cafe.ttf) format("truetype");
+}
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 800px;
+
+$color-withe: #fff;
+$color-primary: #e7c36b;
+$color-secondary: #475569;
+
+$color-background: #efefef;
+
+$menu-height: 5.6rem;
+$container-padding: 5%;
+$container-max-width: 1200px;

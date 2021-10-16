@@ -3,8 +3,9 @@ export const data = {
   logo: {
     src: '/images/logo-action-quality.png',
     alt: 'Action Quality Logo',
-    width: 325,
-    height: 131
+    /* Original 325 x 131 */
+    width: 146.25,
+    height: 58.95
   },
   menu: [
     { section: 'home', title: ['Home', 'Home']},

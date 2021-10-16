@@ -5,8 +5,6 @@ import Home from '../Home';
 import Section from '../Section';
 import Contact from '../Contact';
 
-import styles from './styles.module.scss';
-
 const Main: NextPage = () => {
 
   const sections = {
